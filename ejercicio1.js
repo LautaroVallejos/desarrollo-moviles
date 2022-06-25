@@ -6,6 +6,8 @@
  * 4) Declarar let num1 y num2, sumarle +1 y +5 respectivamente y mostrar por pantalla los resultados.
  * 5) Declarar dos numeros, mostrar por pantalla el contenido de ambas variables y el resultardo de la multiplicacion.
  * 6) Solicitar al usuario que ingrese el valor de un numero por teclado. Utilizar prompt y almacenar dentro de la variable num, luego postrarlo por pantalla.
+ * 7) Con la variable ingresada por teclado del ejercicio anterior mostrar pantalla el valor multiplicado x10, en una variable aparte.
+ * 8) Escribir por consola el resultado de sumar a y b (pedirlos mediante prompt)
  */
 
 // 1. [Compleado]
@@ -40,5 +42,17 @@ let multip = Num1 * Num2;
 document.write(`El resultado de la multiplicacion es: ${multip}` + "<br>");
 
 // 6. [Completado]
-let input = prompt("Ingrese un mensaje:");
-alert(`El mensaje que ha sido ingresado es: ${input}`);
+let input = prompt("Ingrese un numero:");
+input = Number(input)
+alert(`El numero ingresado es: ${input}`);
+
+// 7. [Completado]
+let Input = input * 10;
+alert(`El mismo numero multiplicado x10 seria: ${Input}`);
+
+// 8. [Completado]
+let numA = Number(prompt("Ingrese un primer numero: "))
+let numB = Number(prompt("Ingrese un segundo numero: "))
+
+let result = numA + numB
+console.log(`El resultado de la suma de los numeros ingresados es: ${result}`);
