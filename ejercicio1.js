@@ -1,58 +1,86 @@
-/**
- * Consignas
- * 1) Realizar una estructura basica de html, linkear un css y tambien un script de js llamado ejercicio1.js.
- * 2) Que se muestra por pantalla "Hola mundo" mediante el archivo js.
- * 3) Declarar let a y b, inicializar ambos valores y mostrar por medio de la variable resultado la suma de a y b en pantalla.
- * 4) Declarar let num1 y num2, sumarle +1 y +5 respectivamente y mostrar por pantalla los resultados.
- * 5) Declarar dos numeros, mostrar por pantalla el contenido de ambas variables y el resultardo de la multiplicacion.
- * 6) Solicitar al usuario que ingrese el valor de un numero por teclado. Utilizar prompt y almacenar dentro de la variable num, luego postrarlo por pantalla.
- * 7) Con la variable ingresada por teclado del ejercicio anterior mostrar pantalla el valor multiplicado x10, en una variable aparte.
- * 8) Escribir por consola el resultado de sumar a y b (pedirlos mediante prompt)
- */
+// 1. Solicitar un  numero y si es mayor a 10 imprimir el numero que es mayor
+let num = Number(prompt("Ingrese un numero"));
 
-// 1. [Compleado]
+if(num >= 10){
+    alert("El numero es mayor a 10");
+} else {
+    alert("El numero es menor a 10");
+}
 
-// 2. [Completado] 
-document.write("<h1>Hello World!</h1>");
+// 2. Solicitar una edad y mostrar por pantalla si es mayor o menor legalmente
+let age = Number(prompt("Ingrese su edad"))
 
-// 3. [Completado]
-let a, b, res;
-a = 25
-b = 5
-res = a + b;
+if(age >= 18){
+    alert("Usted es mayor de edad!!")
+} else {
+    alert("Usted es menor de edad")
+}
 
-document.write(`La suma de A + B es: ${res}` + "<br>");
+// 3. Prompt 2 numero y mostrar el mayor y el menor
+let num1 = Number(prompt("Ingrese su primer numero"))
+let num2 = Number(prompt("Ingrese su segundo numero"))
 
-// 4. [Completado]
-let num1 = 2;
-let num2 = 10;
+if(num1 > num2){
+    alert(`El numero ${num1} es mayor que ${num2}`);
+} else {
+    alert(`El numero ${num2} es mayor que ${num1}`);
+}
 
-num1 += 1;
-num2 += 5;
+// 4. Ordenar 3 numeros de mayor a menor
+let numA = Number(prompt("Ingrese el primer numero"));
+let numB = Number(prompt("Ingrese el segundo numero"));
+let numC = Number(prompt("Ingrese el tercer numero"));
 
-document.write(`Numero 1 es: ${num1}` + "<br>");
-document.write(`Numero 2 es: ${num2}` + "<br>");
+alert("Datos mostrados en la consola")
 
-// 5. [Completado]
-let Num1 = 5;
-let Num2 = 10;
+if(numA > numB && numA > numC){
+    console.log(`Numero mayor: ${numA}`)
+    if(numB > numC){
+        console.log(`Numero intermedio: ${numB}`)
+        console.log(`Numero menor: ${numC}`)
+    } else {
+        console.log(`Numero intermedio: ${numC}`)
+        console.log(`Numero menor: ${numB}`)
+    }
+}
 
-let multip = Num1 * Num2;
+if(numB > numA && numB > numC){
+    console.log(`Numero mayor: ${numB}`)
+    if(numA > numC){
+        console.log(`Numero intermedio: ${numA}`)
+        console.log(`Numero menor: ${numC}`)
+    } else {
+        console.log(`Numero intermedio: ${numC}`)
+        console.log(`Numero menor: ${numA}`)
+    }
+}
 
-document.write(`El resultado de la multiplicacion es: ${multip}` + "<br>");
+if(numC > numB && numC > numA){
+    console.log(`Numero mayor: ${numC}`)
+    if(numA > numB){
+        console.log(`Numero intermedio: ${numA}`)
+        console.log(`Numero menor: ${numB}`)
+    } else {
+        console.log(`Numero intermedio: ${numB}`)
+        console.log(`Numero menor: ${numA}`)
+    }
+}
 
-// 6. [Completado]
-let input = prompt("Ingrese un numero:");
-input = Number(input)
-alert(`El numero ingresado es: ${input}`);
+// 5. Ingresar un numero y definir si es positivo o negativo
+let number = Number(prompt("Ingrese un numero positivo o negativo"));
 
-// 7. [Completado]
-let Input = input * 10;
-alert(`El mismo numero multiplicado x10 seria: ${Input}`);
+if(number > 0){
+    alert(`El numero ingresado es positivo`);
+} else {
+    alert(`El numero ingresado es negativo`);
+}
 
-// 8. [Completado]
-let numA = Number(prompt("Ingrese un primer numero: "))
-let numB = Number(prompt("Ingrese un segundo numero: "))
+// 6. Ingresar un numero y mostrar si es par o impar
 
-let result = numA + numB
-console.log(`El resultado de la suma de los numeros ingresados es: ${result}`);
+let numerito = Number(prompt("Ingrese un numero:"));
+
+if(numerito % 2 === 0){
+    alert(`El numero ${numerito} es par`);
+} else {
+    alert(`El numero ${numerito} es impar`);
+}
